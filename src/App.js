@@ -33,17 +33,17 @@ function App() {
 
   // DELETE
   function deleteTodo(text) {
-    fetch("https://todolist-backend-e30t.onrender.com/todos", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ text: text })
-    })
-      .then(res => res.json())
-      .then(() => getTodos())
-      .catch(err => console.log(err));
-  }
+  fetch("https://todolist-backend-e30t.onrender.com/todos", {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ text: text })
+  })
+    .then(res => res.json())
+    .then(() => getTodos())
+    .catch(err => console.log(err));
+}
 
   useEffect(() => {
     getTodos();
