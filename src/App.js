@@ -6,7 +6,7 @@ function App() {
 
   // GET
   function getTodos() {
-    fetch("http://localhost:1000/todos")
+    fetch("https://todolist-backend-e30t.onrender.com/todos")
       .then(res => res.json())
       .then(data => setTodos(data))
       .catch(err => console.log(err));
@@ -16,7 +16,7 @@ function App() {
   function addTodo() {
     if (text === "") return;
 
-    fetch("http://localhost:1000/todos", {
+    fetch("https://todolist-backend-e30t.onrender.com/todos", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -33,7 +33,7 @@ function App() {
 
   // DELETE
   function deleteTodo(text) {
-    fetch("http://localhost:1000/delete", {
+    fetch("https://todolist-backend-e30t.onrender.com/todos", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
