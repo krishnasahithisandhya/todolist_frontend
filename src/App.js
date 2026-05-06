@@ -4,7 +4,7 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [text, setText] = useState("");
 
-  const BASE_URL = "https://todolist-backend-e30t.onrender.com/todos";
+  const BASE_URL = "https://todolist-backend-39qv.onrender.com";
 
   // GET TODOS
   function getTodos() {
